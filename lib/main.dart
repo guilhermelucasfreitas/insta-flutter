@@ -2,10 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:insta/http/webclient.dart';
 import 'package:insta/post.dart';
 import 'package:insta/story.dart';
 
-void main() => runApp(App());
+void main() {
+  runApp(App());
+}
 
 class App extends StatelessWidget {
   @override
@@ -20,16 +23,26 @@ class App extends StatelessWidget {
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
+  FindAll findAll = new FindAll();
 }
 
 class _HomePageState extends State<HomePage> {
-//  var _pages = [
-//    Feed(),
-//    Feed(),
-//    Feed(),
-//    Feed(),
-//    Feed(),
-//  ];
+
+//  Future<Post> futurePost;
+//
+//  @override
+//  void initState() {
+//    super.initState();
+//    futurePost = getPosts();
+//  }
+
+  List<Post> listaPost = new List<Post>();
+
+  void initState() async {
+    super.initState();
+    widget.findAll.getPosts();
+  }
+
 
 //  int currentPage = 0;
 
