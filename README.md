@@ -1,6 +1,6 @@
 # insta
 
-A new Flutter project.
+Instagram only screens. Project with API and screens: https://github.com/guilhermelucasfreitas/dev-pictures
 
 ## Getting Started
 
